@@ -394,6 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2243152816376089275}
+  - component: {fileID: -3349439736054290311}
   m_Layer: 0
   m_Name: Baloon
   m_TagString: Enemy
@@ -426,6 +427,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3349439736054290311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243152816376089274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bd4a35a988d45fc864add49785e261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &2243152816396809885
 GameObject:
   m_ObjectHideFlags: 0
@@ -11147,15 +11161,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3c7a61b29b828e448be027d7ba805275, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feec926336409f041b56f70605dab7e4, type: 3}
---- !u!1 &1432195583349822143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: feec926336409f041b56f70605dab7e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2243152817877299182}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1777794746434144261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: feec926336409f041b56f70605dab7e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2243152817877299182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432195583349822143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: feec926336409f041b56f70605dab7e4,
     type: 3}
   m_PrefabInstance: {fileID: 2243152817877299182}
   m_PrefabAsset: {fileID: 0}
