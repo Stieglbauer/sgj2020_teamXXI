@@ -10,11 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask; 
 
-    public float Speed = 12f;
+    public float Speed = 8f;
 
     public float gravity = -9.81f;
 
-    public float jumpHeight = 4f;
+    public float jumpHeight = 1.5f;
 
     Vector3 velocity;
     bool isGrounded;
@@ -32,22 +32,30 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded == true && velocity.y < 0)
         {
-            velocity.y = -2f;
+            velocity.y = -3f;
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        if (isGrounded == true)
+        {
+            Vector3 move = transform.right * x * Speed * Time.deltaTime + transform.forward * z * Speed * Time.deltaTime;
 
-        Vector3 move = transform.right * x * Speed * Time.deltaTime + transform.forward * z * Speed *Time.deltaTime;
+            controller.Move(move);
+        }
+        else
+        {
+            Vector3 move = transform.right * x * Speed/2 * Time.deltaTime + transform.forward * z * Speed/2 * Time.deltaTime;
 
-        controller.Move(move);
+            controller.Move(move);
+        }
 
         if(Input.GetButtonDown("Jump") && isGrounded == true)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity *Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }

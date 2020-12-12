@@ -8,6 +8,9 @@ public class MouseLook : MonoBehaviour
 
     public Transform playerBody;
 
+    Ray ray;
+    RaycastHit hit;
+
     float xRotation = 0f;
     // Start is called before the first frame update
     void Start()
@@ -25,5 +28,12 @@ public class MouseLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit) && Input.GetKey(KeyCode.Mouse0))
+        {
+            float currAng = hit.transform.GetComponent<Rotateable>().getAngle();
+            hit.transform.GetComponent<Rotateable>().setAngle(currAng + 0.25f);
+        }
     }
 }
