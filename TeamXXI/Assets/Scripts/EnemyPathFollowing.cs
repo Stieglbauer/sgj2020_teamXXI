@@ -19,10 +19,10 @@ public class EnemyPathFollowing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion direction = Quaternion.LookRotation(transform.position - currentTarget.transform.position, Vector3.up);
+        Quaternion direction = Quaternion.LookRotation(stripFromY(currentTarget.transform.position - transform.position), Vector3.up);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, 30*Time.deltaTime);
         if (Quaternion.Angle(transform.rotation, direction) < 1) {
-            transform.Translate(10 * Time.deltaTime * (currentTarget.transform.position - transform.position).normalized, Space.World);
+            transform.Translate(3 * Time.deltaTime * (currentTarget.transform.position - transform.position).normalized, Space.World);
             if (Vector3.Distance(transform.position, currentTarget.transform.position) < 1)
             {
                 Debug.Log("next!");
@@ -34,5 +34,10 @@ public class EnemyPathFollowing : MonoBehaviour
                 GameObject.Destroy(this.gameObject);
             }
         }
+    }
+
+    private Vector3 stripFromY(Vector3 vec)
+    {
+        return new Vector3(vec.x, 0, vec.z);
     }
 }
