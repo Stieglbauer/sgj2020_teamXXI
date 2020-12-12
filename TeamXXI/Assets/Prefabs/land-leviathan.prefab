@@ -1412,7 +1412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62c75c72f290334aba2cb4b3e03dd3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 17572d95bff77e2439461775877f19b0, type: 2}
   nails: {fileID: 6956442410238616740}
   nails2: {fileID: 642039225825497194}
   nails3: {fileID: 6708528066840776856}
@@ -2000,6 +1999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8318061408162569375}
+  - component: {fileID: 530667655381269306}
   m_Layer: 0
   m_Name: land-leviathan
   m_TagString: Untagged
@@ -2046,6 +2046,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &530667655381269306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8657150396522432037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4637f17a835ab7478c8879c62baf249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  explosionPrefab: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
 --- !u!1 &9175727319830044430
 GameObject:
   m_ObjectHideFlags: 0
