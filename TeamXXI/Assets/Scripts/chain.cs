@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class chain : MonoBehaviour
 {
-    [SerializeField]
     private Material mat;
 
     [SerializeField]
@@ -23,6 +22,7 @@ public class chain : MonoBehaviour
         nail2_ren.enabled = false;
         nail3_ren.enabled = false;
         nail4_ren.enabled = false;
+        mat = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
