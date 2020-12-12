@@ -69,7 +69,7 @@ public class Rotateable : MonoBehaviour
 
     private void connectionRotation()
     {
-        connectedObj.GetComponent<Rotateable>().setAngle(angle/16);
+        connectedObj.GetComponent<Rotateable>().setAngle(angle/100);
     }
     //-310 runter 500 hoch
 }

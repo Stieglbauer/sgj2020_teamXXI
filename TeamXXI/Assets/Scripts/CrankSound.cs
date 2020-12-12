@@ -8,9 +8,21 @@ public class CrankSound : MonoBehaviour
     public List<AudioClip> los = new List<AudioClip>();
     public AudioSource source;
     public HingeJoint reference;
+    public Rotateable rotateableReference;
     private bool nextHi = false;
     private float lastAngle = 0.0f;
     private float deltaAngle = 0.0f;
+
+    public float getAngle()
+    {
+        if (reference != null) {
+            return reference.angle;
+        }
+        if (rotateableReference != null) {
+            return rotateableReference.getAngle();
+        }
+        return 0.0f;
+    }
 
     public void Squeak() {
         var sources = nextHi ? his : los;
@@ -23,10 +35,11 @@ public class CrankSound : MonoBehaviour
 
     void Update()
     {
-        deltaAngle += Mathf.DeltaAngle(lastAngle, reference.angle);
+        float angle = getAngle();
+        deltaAngle += Mathf.DeltaAngle(lastAngle, angle);
         if (Mathf.Abs(deltaAngle) > 180.0f) {
             Squeak();
         }
-        lastAngle = reference.angle;
+        lastAngle = angle;
     }
 }
