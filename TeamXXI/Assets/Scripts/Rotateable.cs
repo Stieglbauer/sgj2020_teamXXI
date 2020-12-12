@@ -8,6 +8,8 @@ public class Rotateable : MonoBehaviour
     private float angle;
     [SerializeField]
     private Vector3 axis;
+    [SerializeField]
+    private bool self_propelled;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,14 @@ public class Rotateable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.rotation = Quaternion.AngleAxis(angle, axis);
+        if (self_propelled)
+        {
+            this.gameObject.transform.RotateAround(gameObject.transform.position, gameObject.transform.rotation * axis, Time.deltaTime * angle);
+        }
+        else
+        {
+            this.gameObject.transform.rotation = gameObject.transform.parent.rotation * Quaternion.AngleAxis(angle, axis);
+        }
     }
 
     public float getAngle()
