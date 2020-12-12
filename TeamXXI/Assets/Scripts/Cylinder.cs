@@ -36,24 +36,27 @@ public class Cylinder : MonoBehaviour
         {
             direction = -1;
         }*/
-        progress += Time.deltaTime * direction * speed;
-        angle += Time.deltaTime * 180 * speed / max;
-        if (progress < 0)
-        {
-            progress = 0;
-            angle = 0;
-            direction = 1;
-        } else if(progress > max)
-        {
-            progress = max;
-            direction = -1;
+        if (max != 0) { 
+
+            progress += Time.deltaTime * direction * speed;
+            angle += Time.deltaTime * 180 * speed / max;
+            if (progress < 0)
+            {
+                progress = 0;
+                angle = 0;
+                direction = 1;
+            } else if (progress > max)
+            {
+                progress = max;
+                direction = -1;
+            }
+
+
+            gameObject.transform.position = center.transform.position + progress * (gameObject.transform.parent.rotation * Vector3.down).normalized;
         }
-
-
-        gameObject.transform.position = center.transform.position + progress * (gameObject.transform.parent.rotation * Vector3.down).normalized;
         //(direction * Time.deltaTime * speed * (world_end - world_start).normalized, Space.World);
         //cylinder_center.transform.position = gameObject.transform.position + gameObject.transform.parent.rotation * bar_offset;
-        if(wheel)
+        if (wheel)
         {
             wheel.transform.rotation = Quaternion.AngleAxis(angle, Vector3.left);
         }
