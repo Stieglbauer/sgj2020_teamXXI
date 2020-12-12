@@ -219,6 +219,11 @@ MonoBehaviour:
   angle: 2000
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1 &2243152816204734220
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +380,11 @@ MonoBehaviour:
   angle: 2000
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1 &2243152816376089274
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +396,7 @@ GameObject:
   - component: {fileID: 2243152816376089275}
   m_Layer: 0
   m_Name: Baloon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

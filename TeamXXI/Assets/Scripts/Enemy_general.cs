@@ -13,7 +13,7 @@ public class Enemy_general : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.tag = "Enemy";
     }
 
     // Update is called once per frame
@@ -26,11 +26,11 @@ public class Enemy_general : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
             // Destroy the gameObject
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
-    public void ReduceLivesBy(int amount)
+    public void ReduceLivesBy(float amount)
     {
         lives -= amount;
     }
