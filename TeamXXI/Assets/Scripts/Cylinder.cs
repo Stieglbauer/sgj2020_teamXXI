@@ -58,7 +58,7 @@ public class Cylinder : MonoBehaviour
         //cylinder_center.transform.position = gameObject.transform.position + gameObject.transform.parent.rotation * bar_offset;
         if (wheel)
         {
-            wheel.transform.rotation = Quaternion.AngleAxis(angle, Vector3.left);
+            wheel.transform.localRotation = Quaternion.AngleAxis(angle, Vector3.left);
         }
         cylinder_center.transform.rotation = Quaternion.LookRotation(cylinder_center.transform.position - cylinder_direction.transform.position, center.transform.position - cylinder_center.transform.position);
 
