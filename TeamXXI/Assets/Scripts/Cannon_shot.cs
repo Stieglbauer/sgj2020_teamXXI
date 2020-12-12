@@ -30,9 +30,9 @@ public class Cannon_shot : MonoBehaviour
 
     void shot()
     {
-        Instantiate(explosion, expl_pos.transform.position, Quaternion.Euler(-90,0,0) * muzzle.transform.rotation, muzzle.transform.parent);
+        Instantiate(explosion, expl_pos.transform.position, muzzle.transform.rotation, muzzle.transform.parent);
         muzzle.transform.position = backPos.transform.position;
-        GameObject cannonBall = Instantiate(projectile, expl_pos.transform.position, Quaternion.Euler(-90, 0, 0) * muzzle.transform.rotation);
-        cannonBall.GetComponent<Rigidbody>().velocity = cannonBall.transform.rotation * new Vector3(0, 0, 15);
+        GameObject cannonBall = Instantiate(projectile, expl_pos.transform.position,  muzzle.transform.rotation);
+        cannonBall.GetComponent<Rigidbody>().velocity = cannonBall.transform.rotation * new Vector3(0, 15, 0);
     }
 }
