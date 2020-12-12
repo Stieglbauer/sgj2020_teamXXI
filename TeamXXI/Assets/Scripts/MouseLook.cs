@@ -29,11 +29,15 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit) && Input.GetKey(KeyCode.Mouse0))
-        {
-            float currAng = hit.transform.GetComponent<Rotateable>().getAngle();
-            hit.transform.GetComponent<Rotateable>().setAngle(currAng + 0.25f);
+        float turnAngle = Input.GetKey(KeyCode.Mouse0) ? 0.25f : Input.GetKey(KeyCode.Mouse1) ? -0.25f : 0;
+        if (turnAngle != 0) {
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit)) {
+                Rotateable hitRotateable = hit.transform.GetComponent<Rotateable>();
+                if (hitRotateable != null) {
+                    hitRotateable.setAngle(hitRotateable.getAngle() + turnAngle);
+                }
+            }
         }
     }
 }

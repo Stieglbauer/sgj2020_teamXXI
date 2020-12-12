@@ -10,6 +10,18 @@ public class Rotateable : MonoBehaviour
     private Vector3 axis;
     [SerializeField]
     private bool self_propelled;
+    [SerializeField]
+    private GameObject connectedObj;
+    [SerializeField]
+    private bool hasConObj;
+    [SerializeField]
+    private bool hasMax;
+
+    [SerializeField]
+    private float maxRotation = 0;
+    [SerializeField]
+    private float minRotation = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +39,22 @@ public class Rotateable : MonoBehaviour
         {
             this.gameObject.transform.rotation = gameObject.transform.parent.rotation * Quaternion.AngleAxis(angle, axis);
         }
+
+        if(hasConObj == true)
+        {
+            connectionRotation();
+        }
+        if (hasMax == true)
+        {
+            if (angle > maxRotation)
+            {
+                angle = maxRotation;
+            }
+            if (angle < minRotation)
+            {
+                angle = minRotation;
+            }
+        }
     }
 
     public float getAngle()
@@ -38,4 +66,10 @@ public class Rotateable : MonoBehaviour
     {
         this.angle = angle;
     }
+
+    private void connectionRotation()
+    {
+        connectedObj.GetComponent<Rotateable>().setAngle(angle/16);
+    }
+    //-310 runter 500 hoch
 }
