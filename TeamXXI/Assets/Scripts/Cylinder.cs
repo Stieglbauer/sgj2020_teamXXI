@@ -22,6 +22,11 @@ public class Cylinder : MonoBehaviour
         hasWheel = wheel != null;
     }
 
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
     // Update is called once per frame
     void Update()
     {
