@@ -659,6 +659,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1 &1046114585
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +771,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!114 &1123416785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +791,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1 &1137215076
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +913,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1001 &1270531887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1531,6 +1551,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!1001 &1864411375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1898,6 +1923,11 @@ MonoBehaviour:
   angle: 400
   axis: {x: 1, y: 0, z: 0}
   self_propelled: 1
+  connectedObj: {fileID: 0}
+  hasConObj: 0
+  hasMax: 0
+  maxRotation: 0
+  minRotation: 0
 --- !u!4 &170778801863848403
 Transform:
   m_ObjectHideFlags: 0
