@@ -35,5 +35,10 @@ public class MouseLook : MonoBehaviour
             float currAng = hit.transform.GetComponent<Rotateable>().getAngle();
             hit.transform.GetComponent<Rotateable>().setAngle(currAng + 0.25f);
         }
+        else if (Physics.Raycast(ray, out hit) && Input.GetKey(KeyCode.Mouse1))
+        {
+            float currAng = hit.transform.GetComponent<Rotateable>().getAngle();
+            hit.transform.GetComponent<Rotateable>().setAngle(currAng - 0.25f);
+        }
     }
 }
