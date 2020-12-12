@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 1595844475571688686, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
         type: 3}
       propertyPath: m_Name
-      value: big_berta_interactive_v2
+      value: big_berta_interactive_v2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1595844475571688686, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
         type: 3}
