@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Enemies : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class Enemies : MonoBehaviour
 
     [SerializeField]
     private int[] types;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +45,8 @@ public class Enemies : MonoBehaviour
             }
             if(leviathans == 0)
             {
-                Debug.Log("Win");
+                Debug.Log("Win!");
+                SceneManager.LoadScene("Win");
             }
         } else {
             if (counter > schedule[schedule_progress])
