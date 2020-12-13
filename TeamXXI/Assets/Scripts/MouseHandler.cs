@@ -9,7 +9,7 @@ public class MouseHandler : MonoBehaviour
     // vertical rotation speed
     public float verticalSpeed = 1f;
     private float xRotation = 0.0f;
-    private float yRotation = 0.0f;
+    private float yRotation = 90.0f;
     private Camera cam;
 
     void Start()
