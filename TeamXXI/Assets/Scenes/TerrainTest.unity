@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2374,11 +2374,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306a58e2cbec44ef2943ead4aefb0533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towers:
+  - {fileID: 1256796483}
+  - {fileID: 1918203114}
+  - {fileID: 2023104138}
   startHeightY: 30
   balloonPrefab: {fileID: 2243152816376089274, guid: 139c4cb164071a140a568b5033dcf67b,
     type: 3}
-  minWaitingTimeInSeconds: 10
-  maxWaitingTimeInSeconds: 60
+  minWaitingTimeInSeconds: 1
+  maxWaitingTimeInSeconds: 2
 --- !u!1 &1037483747
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,6 +3017,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256327341}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1256796483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069764211778503330, guid: e41adcae39a4d1143ac20929fc2d404e,
+    type: 3}
+  m_PrefabInstance: {fileID: 374280665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1261855821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,6 +3952,12 @@ Transform:
   m_Father: {fileID: 4625943922964662340}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1918203114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069764211778503330, guid: e41adcae39a4d1143ac20929fc2d404e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073865798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1941034201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 401735492947384344, guid: e41adcae39a4d1143ac20929fc2d404e,
@@ -4041,6 +4057,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023104138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069764211778503330, guid: e41adcae39a4d1143ac20929fc2d404e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1108750408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2062237988
 GameObject:
   m_ObjectHideFlags: 0
