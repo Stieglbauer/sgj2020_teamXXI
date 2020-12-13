@@ -16,6 +16,11 @@ public class SpeakerScript : MonoBehaviour
     public AudioSource source;
     public List<AudioClip> queue = new List<AudioClip>();
 
+    public static SpeakerScript GetSpeaker()
+    {
+        return GameObject.FindObjectOfType<SpeakerScript>();
+    }
+
     public void Queue(AudioClip clip)
     {
         queue.Add(clip);
