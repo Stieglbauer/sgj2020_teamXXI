@@ -2394,8 +2394,8 @@ MonoBehaviour:
   - {fileID: 2221655888261361337, guid: 53e5a87a8426dba43a6ea9f16e159d72, type: 3}
   schedule:
   - 1
-  - 2
-  - 3
+  - 10
+  - 20
   - 50
   - 60
   - 70
