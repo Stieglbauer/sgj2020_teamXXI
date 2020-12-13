@@ -25,12 +25,11 @@ public class EnemyPathFollowing : MonoBehaviour
             transform.Translate(3 * Time.deltaTime * stripFromY(currentTarget.transform.position - transform.position).normalized, Space.World);
             if (Vector3.Distance(transform.position, currentTarget.transform.position) < 1)
             {
-                Debug.Log("next!");
                 currentTarget = pf.getNextCheckpoint(currentTarget);
             }
             if (currentTarget == null)
             {
-                Debug.Log("Boom!");
+                Debug.Log("Lose!");
                 GameObject.Destroy(this.gameObject);
             }
         }
