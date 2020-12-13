@@ -14,18 +14,27 @@ public class Balloon : MonoBehaviour
     {
         Vector3 startPosition = transform.position;
         Vector3 overPosition = new Vector3(9, startPosition.y, 10);
-
+        
         // TODO: Choose the rotation to fly to the next tower
-        //rotation = Quaternion.FromToRotation(startPosition, overPosition);
+        //transform.rotation = Quaternion.FromToRotation(startPosition, overPosition);
+        //transform.rotation = Quaternion.FromToRotation(-Vector3.right, overPosition - startPosition);
+        transform.rotation = Quaternion.FromToRotation(-Vector3.right, overPosition - startPosition);
         //Quaternion direction = Quaternion.LookRotation(overPosition - startPosition, Vector3.up);
         //transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, 30 * Time.deltaTime);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Vector3 overPosition = new Vector3(9, transform.position.y, 10);
+        Gizmos.DrawLine(transform.position, overPosition);
+        Gizmos.DrawWireSphere(overPosition, 5.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+        transform.Translate(-Vector3.right * speed * Time.deltaTime, Space.Self);
     }
 
  
