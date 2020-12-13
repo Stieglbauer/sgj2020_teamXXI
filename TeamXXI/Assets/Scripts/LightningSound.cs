@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class LightningSound : MonoBehaviour
 {
-    public AudioSource source;
-    public float startDelay;
 
     void Start()
     {
-        source.PlayDelayed(startDelay);
+        transform.parent = null;
     }
 
 }
