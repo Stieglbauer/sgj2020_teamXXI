@@ -12,15 +12,6 @@ public class Balloon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 startPosition = transform.position;
-        Vector3 overPosition = new Vector3(9, startPosition.y, 10);
-        
-        // TODO: Choose the rotation to fly to the next tower
-        //transform.rotation = Quaternion.FromToRotation(startPosition, overPosition);
-        //transform.rotation = Quaternion.FromToRotation(-Vector3.right, overPosition - startPosition);
-        transform.rotation = Quaternion.FromToRotation(-Vector3.right, overPosition - startPosition);
-        //Quaternion direction = Quaternion.LookRotation(overPosition - startPosition, Vector3.up);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, 30 * Time.deltaTime);
     }
 
     void OnDrawGizmosSelected()
@@ -35,7 +26,15 @@ public class Balloon : MonoBehaviour
     {
 
         transform.Translate(-Vector3.right * speed * Time.deltaTime, Space.Self);
+
+        if (transform.position.x > 300 || transform.position.x < -300 ||
+            transform.position.y > 300 || transform.position.y < -300 ||
+            transform.position.z > 300 || transform.position.z < -300)
+        {
+            Destroy(this);
+        }
     }
 
- 
+
+
 }

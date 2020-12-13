@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GenerateBallons : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject[] towers;
     [SerializeField]
     private float startHeightY;
     [SerializeField]
@@ -24,6 +27,7 @@ public class GenerateBallons : MonoBehaviour
     private float position;
     private float generationTime;
     private float elapsed = 0f;
+    private int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -37,14 +41,25 @@ public class GenerateBallons : MonoBehaviour
         elapsed += Time.deltaTime;
         if (elapsed >= generationTime)
         {
+            if (counter >= towers.Length)
+            {
+                counter = 0;
+            }
+
             elapsed = elapsed % generationTime;
 
             SetStartPosition();
             Vector3 startPosition = new Vector3(startXPosition, startHeightY, startZPosition);
 
-            // TODO: Choose the right rotation
-            Instantiate(balloonPrefab, startPosition, Quaternion.identity);
+            //Vector3 overPosition = new Vector3(9, startPosition.y, 10);
+            Vector3 overPosition = towers[counter].transform.position;
+            overPosition.y = startHeightY;
+
+            Quaternion rotation = Quaternion.FromToRotation(-Vector3.right, overPosition - startPosition);
+            Instantiate(balloonPrefab, startPosition, rotation);
             SetGenerationTime();
+
+            counter++;
         }
     }
 
