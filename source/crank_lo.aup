@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="crank_lo_data" version="1.3.0" audacityversion="2.4.1" sel0="0.0000000000" sel1="0.6087755102" vpos="0" h="0.0000000000" zoom="1399.7094911584" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + samples" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="147" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="26365">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fa75.au" len="26365" min="-0.363209" max="0.324708" rms="0.040694"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="147" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="27710">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1fdd3.au" len="27710" min="-0.248162" max="0.252629" rms="0.03145"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="147" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="26578">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1ffcc.au" len="26578" min="-0.317019" max="0.254889" rms="0.029404"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="147" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24134">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f048.au" len="24134" min="-0.252553" max="0.237954" rms="0.034755"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="147" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="26583">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f260.au" len="26583" min="-0.270673" max="0.270798" rms="0.0344"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="350498__supersound23__squeaky-hinge" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="1" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="26847">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f6d6.au" len="26847" min="-0.252325" max="0.225707" rms="0.031026"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

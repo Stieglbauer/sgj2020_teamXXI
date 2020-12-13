@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="crackle2_data" version="1.3.0" audacityversion="2.4.1" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="648.5595703125" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + samples" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="367453__jensfelger__flash-1-2mv-3" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="192000" gain="0.125893" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="524288">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f6cd.au" len="257736" min="-0.890341" max="0.823977" rms="0.067882"/>
+				</waveblock>
+				<waveblock start="257736">
+					<simpleblockfile filename="eff1f10d.au" len="262144" min="-0.048631" max="-0.000649" rms="0.023176"/>
+				</waveblock>
+				<waveblock start="519880">
+					<simpleblockfile filename="eff1fb14.au" len="4408" min="-0.000751" max="-0.0" rms="0.000408"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="2">
+				<controlpoint t="0.000000000000" val="0.112676084042"/>
+				<controlpoint t="0.035463203463" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="367453__jensfelger__flash-1-2mv-3" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="192000" gain="0.125893" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="524288">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f9cc.au" len="257736" min="-0.891231" max="0.891262" rms="0.082444"/>
+				</waveblock>
+				<waveblock start="257736">
+					<simpleblockfile filename="eff1f86a.au" len="262144" min="-0.052859" max="-0.000625" rms="0.023209"/>
+				</waveblock>
+				<waveblock start="519880">
+					<simpleblockfile filename="eff1f0bc.au" len="4408" min="-0.000773" max="-0.0" rms="0.000408"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="2">
+				<controlpoint t="0.000000000000" val="0.112676084042"/>
+				<controlpoint t="0.035463203463" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="crackle" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.778279" pan="0.0" colorindex="0">
+		<waveclip offset="0.08836735" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="47069">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f2ae.au" len="47069" min="-0.080013" max="0.063395" rms="0.008618"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="crackle" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.778279" pan="0.0" colorindex="0">
+		<waveclip offset="0.08836735" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="47069">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f5a9.au" len="47069" min="-0.089732" max="0.071895" rms="0.006348"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
