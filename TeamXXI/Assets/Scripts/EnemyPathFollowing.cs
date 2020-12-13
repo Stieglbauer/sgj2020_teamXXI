@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyPathFollowing : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class EnemyPathFollowing : MonoBehaviour
             {
                 Debug.Log("Lose!");
                 GameObject.Destroy(this.gameObject);
+                SceneManager.LoadScene("Died");
             }
         }
     }
