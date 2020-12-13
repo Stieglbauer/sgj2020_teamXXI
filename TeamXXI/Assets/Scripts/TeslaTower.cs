@@ -15,6 +15,9 @@ public class TeslaTower : MonoBehaviour
 
     private Vector3 emissionSource;
     private float cooldown;
+
+
+    private float damage1, damage2;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,5 +47,10 @@ public class TeslaTower : MonoBehaviour
         GameObject shot = Instantiate(projectile, emissionSource, new Quaternion(0, 0, 0, 1));
         shot.GetComponent<Rigidbody>().velocity = -100 * (emissionSource - target).normalized;
         shot.GetComponent<Rigidbody>().WakeUp();
+    }
+
+    public void makeTowerDamaged(int whichOne)
+    {
+
     }
 }
