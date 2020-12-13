@@ -50,7 +50,7 @@ public class Balloon : MonoBehaviour
 
     private void resetCooldown()
     {
-        cooldown = Random.Range(1, 4);
+        cooldown = Random.Range(7, 10);
     }
     private void throwBomb()
     {
