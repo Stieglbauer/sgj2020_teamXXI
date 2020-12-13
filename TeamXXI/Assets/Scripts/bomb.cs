@@ -46,7 +46,7 @@ public class bomb : MonoBehaviour
                     }
                 }
             }
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

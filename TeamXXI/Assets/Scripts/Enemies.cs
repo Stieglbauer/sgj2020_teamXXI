@@ -21,6 +21,9 @@ public class Enemies : MonoBehaviour
     private int[] types;
 
 
+    [SerializeField]
+    private float endlessTime = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,17 @@ public class Enemies : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
+        if (endlessTime > 0)
+        {
+            if (counter >= endlessTime)
+            {
+                GameObject tank = Instantiate(enemyTypes[types[schedule_progress]], this.transform.position, enemyTypes[types[schedule_progress]].transform.rotation);
+                tank.GetComponent<EnemyPathFollowing>().setPath(path);
+                counter = 0;
+                endlessTime = Random.Range(5, 10);
+            }
+            return;
+        }
         if (schedule_progress >= schedule.Length) {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             int leviathans = 0;
