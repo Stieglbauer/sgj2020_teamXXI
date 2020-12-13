@@ -19,7 +19,6 @@ public class RepairPos : MonoBehaviour
 
     public void repair(float val)
     {
-        Debug.Log("repairing");
         tt.repair(targetIndex, val);
     }
 

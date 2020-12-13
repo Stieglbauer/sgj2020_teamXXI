@@ -221,19 +221,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &3973974556748873858
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872656761534843039}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.004195748
-  m_Center: {x: -0.00038502426, y: 0.0000000062864305, z: -0.000000004889445}
 --- !u!114 &3579325147745965208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +254,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.0042287363
   m_Center: {x: -0.00041800315, y: -0.000000023496321, z: -0.00000001968199}
+--- !u!135 &3973974556748873858
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872656761534843039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.004195748
+  m_Center: {x: -0.00038502426, y: 0.0000000062864305, z: -0.000000004889445}
 --- !u!1001 &1800600896049223244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595844475571688686, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 2120708018475109972, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
         type: 3}
@@ -409,6 +414,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6584864618520452819, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 6812188168895480324, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
         type: 3}
       propertyPath: axis.x
@@ -433,6 +443,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060556578487026464, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 7837301407202478220, guid: 41c6bb9b2cc47b840ac15c54727d15e2,
         type: 3}

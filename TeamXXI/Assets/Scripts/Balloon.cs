@@ -5,13 +5,19 @@ using UnityEngine;
 public class Balloon : MonoBehaviour
 {
     [SerializeField]
+    private GameObject bomb;
+
+    [SerializeField]
     private float speed;
     private float currentXPosition;
     private float currentZPosition;
 
+    private float cooldown;
+
     // Start is called before the first frame update
     void Start()
     {
+        resetCooldown();
     }
 
     void OnDrawGizmosSelected()
@@ -24,6 +30,13 @@ public class Balloon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cooldown -= Time.deltaTime;
+        if(cooldown <= 0)
+        {
+            Debug.Log("bomb away");
+            resetCooldown();
+            throwBomb();
+        }
 
         transform.Translate(-Vector3.right * speed * Time.deltaTime, Space.Self);
 
@@ -35,6 +48,13 @@ public class Balloon : MonoBehaviour
         }
     }
 
-
+    private void resetCooldown()
+    {
+        cooldown = Random.Range(1, 4);
+    }
+    private void throwBomb()
+    {
+        Instantiate(bomb, gameObject.transform.position, new Quaternion(0, 0, 0, 1));
+    }
 
 }
