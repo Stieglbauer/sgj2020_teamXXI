@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TerrainTest.unity
+    guid: 98e061ab47df34ea594ad283b6cb2225
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 0fa496990644d4f0ab9475ee46f11670
+  - enabled: 1
+    path: Assets/Scenes/Died.unity
+    guid: e901c9c00bb914655b6ce1dea13a4d12
   m_configObjects: {}
