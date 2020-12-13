@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ladder : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,12 @@ public class ladder : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
+            if(Input.GetKeyDown(KeyCode.Space)) {
+                Debug.Log("climbing");
+                other.GetComponent<CharacterController>().enabled = false;
+                other.transform.position = target.transform.position;
+                other.GetComponent<CharacterController>().enabled = true;
+            }
         }
     }
 }
