@@ -32,7 +32,8 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        float turnAngle = Input.GetKey(KeyCode.Mouse0) ? 500 : Input.GetKey(KeyCode.Mouse1) ? -500 : 0;
+        float turnAngle = Input.GetKey(KeyCode.Mouse0) ? 1000 : Input.GetKey(KeyCode.Mouse1) ? -1000 : 0;
+        ui.GetComponent<Text>().text = "";
         if (turnAngle != 0) {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit)) {
@@ -55,14 +56,9 @@ public class MouseLook : MonoBehaviour
                 RepairPos rp = hit.transform.GetComponent<RepairPos>();
                 if (rp != null)
                 {
-                    if(rp.isDamaged())
+                    if (rp.isDamaged())
                         ui.GetComponent<Text>().text = "Click to repair";
-                    else
-                        ui.GetComponent<Text>().text = "";
                 }
-            } else
-            {
-                ui.GetComponent<Text>().text = "";
             }
 
         }

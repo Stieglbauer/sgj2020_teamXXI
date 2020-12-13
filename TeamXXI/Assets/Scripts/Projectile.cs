@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
             {
                 if (Vector3.Distance(enemy.transform.position, gameObject.transform.position) < radius)
                 {
-                    enemy.GetComponent<Enemy_general>().ReduceLivesBy(10 / (1 + Vector3.Distance(enemy.transform.position, gameObject.transform.position)));
+                    enemy.GetComponent<Enemy_general>().ReduceLivesBy(15 / (1 + Vector3.Distance(enemy.transform.position, gameObject.transform.position)));
                 }
             }
             Destroy(gameObject);
