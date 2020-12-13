@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4215115114202129175}
   m_Layer: 0
   m_Name: projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82fc9e6e77587af47b0ed8f4fbcdc744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 7
   explosion: {fileID: 100006, guid: 93485fd5fc2ccf2439cb3239186f6382, type: 3}
 --- !u!1 &4126094981753467006
 GameObject:

@@ -7,6 +7,9 @@ public class Cannon_shot : MonoBehaviour
     [SerializeField]
     private GameObject muzzle, expl_pos, explosion, startPos, backPos, projectile;
 
+    [SerializeField]
+    private float fireRate, cooldown;
+
     public bool debug;
     // Start is called before the first frame update
     void Start()
@@ -17,9 +20,15 @@ public class Cannon_shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cooldown += Time.deltaTime;
         if (Vector3.Distance(startPos.transform.position, muzzle.transform.position) > 0.01f)
         {
             muzzle.transform.position = Vector3.Lerp(muzzle.transform.position, startPos.transform.position, 0.01f);
+        }
+        if(cooldown > fireRate)
+        {
+            shot();
+            cooldown = 0;
         }
         if (debug) {
             Debug.Log("Boom!");

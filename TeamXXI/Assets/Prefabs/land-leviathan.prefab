@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  explosionPrefab: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
+  explosionPrefab: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
 --- !u!1 &9175727319830044430
 GameObject:
   m_ObjectHideFlags: 0
