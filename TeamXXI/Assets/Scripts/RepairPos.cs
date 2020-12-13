@@ -19,7 +19,14 @@ public class RepairPos : MonoBehaviour
 
     public void repair(float val)
     {
+        bool wasDamaged = isDamaged();
         tt.repair(targetIndex, val);
+        if (wasDamaged && !isDamaged()) {
+            var speaker = SpeakerScript.GetSpeaker();
+            if (speaker != null) {
+                speaker.Queue(speaker.towerRepaired);
+            }
+        }
     }
 
     public bool isDamaged()

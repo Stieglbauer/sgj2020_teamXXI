@@ -30,12 +30,19 @@ public class bomb : MonoBehaviour
                     if(rp != null)
                     {
                         rp.repair(-3);
+                        var speaker = SpeakerScript.GetSpeaker();
+                        if (speaker != null) {
+                            speaker.Queue(speaker.towerCorrupted);
+                        }
                     }
                     Rotateable r = enemy.GetComponent<Rotateable>();
                     if(r != null)
                     {
                         r.setAngle(Random.Range(-360 * 100, 360 * 100));
-
+                        var speaker = SpeakerScript.GetSpeaker();
+                        if (speaker != null) {
+                            speaker.Queue(speaker.cannonDeflected);
+                        }
                     }
                 }
             }
