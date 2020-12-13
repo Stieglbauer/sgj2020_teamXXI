@@ -2292,12 +2292,12 @@ MonoBehaviour:
   towers:
   - {fileID: 1256796483}
   - {fileID: 1918203114}
-  - {fileID: 2023104138}
+  - {fileID: 1108750409}
   startHeightY: 30
   balloonPrefab: {fileID: 2243152816376089274, guid: 139c4cb164071a140a568b5033dcf67b,
     type: 3}
-  minWaitingTimeInSeconds: 1
-  maxWaitingTimeInSeconds: 2
+  minWaitingTimeInSeconds: 10
+  maxWaitingTimeInSeconds: 60
 --- !u!1 &1037483747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,6 +2695,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e41adcae39a4d1143ac20929fc2d404e, type: 3}
+--- !u!1 &1108750409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069764211778503330, guid: e41adcae39a4d1143ac20929fc2d404e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1108750408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1122015040
 PrefabInstance:
   m_ObjectHideFlags: 0
