@@ -37,6 +37,11 @@ public class MouseLook : MonoBehaviour
                 if (hitRotateable != null) {
                     hitRotateable.setAngle(hitRotateable.getAngle() + Time.deltaTime * turnAngle);
                 }
+                RepairPos rp = hit.transform.GetComponent<RepairPos>();
+                if(rp != null)
+                {
+                    rp.repair(Time.deltaTime);
+                }
             }
         }
     }
