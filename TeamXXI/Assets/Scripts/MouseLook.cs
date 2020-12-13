@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject ui;
     public float MouseSensitivity = 100f;
 
     public Transform playerBody;
@@ -40,9 +43,28 @@ public class MouseLook : MonoBehaviour
                 RepairPos rp = hit.transform.GetComponent<RepairPos>();
                 if(rp != null)
                 {
+                    ui.GetComponent<Text>().text = "Repairing...";
                     rp.repair(Time.deltaTime);
                 }
             }
+        } else
+        {
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                RepairPos rp = hit.transform.GetComponent<RepairPos>();
+                if (rp != null)
+                {
+                    if(rp.isDamaged())
+                        ui.GetComponent<Text>().text = "Click to repair";
+                    else
+                        ui.GetComponent<Text>().text = "";
+                }
+            } else
+            {
+                ui.GetComponent<Text>().text = "";
+            }
+
         }
     }
 }
